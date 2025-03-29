@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify';
 function Contact() {
   const [name,setname]=useState('');
   const [email,setemail]=useState('');
   const [message,setmessage]=useState('');
+  
 
   const handleSubmit=(e)=>{
     e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     const serviceId='service_qa874pl'
     const templateId='template_4b22pap'
@@ -17,17 +20,18 @@ function Contact() {
       email:email,
       to_name:'abhishek',
       message:message
-
     }
 
     emailjs.send(serviceId,templateId,templateParams,publicKey)
     .then((response)=>{
-      console.log("email send success",response);
+      console.log(response)
       setemail('');
       setname('');
       setmessage('');
+      toast.success('Message Sent Successfully');
     }).catch((err)=>{
-      console.log("error in sending mail",err)
+      toast.error("failed to send messsage");
+      console.log(err)
     })
   }
   return (
@@ -37,11 +41,11 @@ function Contact() {
         <div className='flex flex-col mt-4 rounded-lg bg-[#D9D9D91A] justify-center items-center '>
             <form action="" className='flex flex-col mt-4 w-full px-4 lg:w-[40%]' onSubmit={handleSubmit}>
                 <label htmlFor="" className='text-gray-400 mt-4'>Name*</label>
-                <input type="text" placeholder='Your Name' className='bg-[#ffffff] rounded-lg h-10 w-full text-black pl-4' onChange={(e)=>setname(e.target.value)}/>
+                <input type="text" placeholder='Your Name' value={name} className='bg-[#ffffff] rounded-lg h-10 w-full text-black pl-4' onChange={(e)=>setname(e.target.value)}/>
                 <label htmlFor="" className='text-gray-400 mt-4'>Email*</label>
-                <input type="email" placeholder='Your Email'  className='bg-[#ffffff] rounded-lg h-10 w-full text-black pl-4' onChange={(e)=>setemail(e.target.value)}/>
+                <input type="email" placeholder='Your Email' value={email} className='bg-[#ffffff] rounded-lg h-10 w-full text-black pl-4' onChange={(e)=>setemail(e.target.value)}/>
                 <label htmlFor="" className='text-gray-400 mt-4'>Message*</label>
-                <input type="text" placeholder='Any Message'  className='bg-[#ffffff] rounded-lg h-20 w-full text-black pl-4' onChange={(e)=>setmessage(e.target.value)}/>
+                <input type="text" placeholder='Any Message' value={message}  className='bg-[#ffffff] rounded-lg h-20 w-full text-black pl-4' onChange={(e)=>setmessage(e.target.value)}/>
                 <button className='m-4 border border-white rounded-2xl w-fit px-4 py-2 cursor-pointer'>Submit</button>
             </form>
 
