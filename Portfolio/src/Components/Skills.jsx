@@ -15,7 +15,7 @@ function Skills() {
         </div>
         <div>
         <p className='text-2xl ml-1  text-gray-400'>FrameWorks*</p>
-        <p className='font-light mt-3'>React.js , Express , NodeJS , Tailwind CSS , Bootstrap , Redux , MaterialUI , React-Bits</p>
+        <p className='font-light mt-3'>React.js , Express , NodeJS , Tailwind CSS , Bootstrap , Redux , MaterialUI , React-Bits , EmailJs</p>
         </div>
         <hr className='mt-2'/>
         <div>

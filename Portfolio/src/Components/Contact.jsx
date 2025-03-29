@@ -31,7 +31,7 @@ function Contact() {
     })
   }
   return (
-    <div className='text-[#ffffff] p-6 flex flex-col'>
+    <div className='text-[#ffffff] p-6 flex flex-col ' id='Contactme'>
         <p className='text-4xl font-semibold'>Contact Me</p>
         <p className='text-sm'>if you want to Collab or Hire Me</p>
         <div className='flex flex-col mt-4 rounded-lg bg-[#D9D9D91A] justify-center items-center '>
