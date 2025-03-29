@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+*{
+    font-family: "Funnel Display", sans-serif;
+}
+.fontstyle{
+    font-family:"Prata", serif ;
+}
+.blureffect{
+    backdrop-filter: blur(90px); 
+    z-index:-1;
+}
+.spaceword{
+    word-spacing: 0.3rem;
+}
+.spaceword2{
+    word-spacing: 0.3rem;
+}
+.backgroundimage{
+    mix-blend-mode:lighten;
+}
+
+.fullbody{
+    background-image: url('./assets/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+.blur-text {
+    filter: blur(10px);
+    opacity: 0;
+    animation: blurAnimation 1s ease-in-out 1s forwards;
+  }
+  
+  @keyframes blurAnimation {
+    0% {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
