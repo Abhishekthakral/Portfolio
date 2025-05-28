@@ -21,7 +21,7 @@ const Hero = () => {
                 <Link to={'#Contactme'} onClick={() => scrollToSection('Contactme')} className='border border-[#D9D9D9] rounded-lg px-6 py-2 text-[#ffffff]'>
                     Contact
                 </Link>
-                <Link to={'https://drive.google.com/file/d/10hBNCWK6hT_T8dIWXH5jN5hpoRV4DCtC/view?usp=sharing'} className='border bg-[#ffffff] border-[#D9D9D9] rounded-lg py-2 px-6 text-black flex gap-1 items-center'>
+                <Link to={'https://drive.google.com/file/d/1BnqfgJ74S6mJbKRewxGXXmAet9GSVvrB/view?usp=drivesdk'} className='border bg-[#ffffff] border-[#D9D9D9] rounded-lg py-2 px-6 text-black flex gap-1 items-center'>
                     <img src={download} alt="" className='h-4 w-4' />
                     Resume
                 </Link>
